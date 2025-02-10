@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dünya Haritası Ülke Seçici</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="timer">Kalan Süre: <span id="countdown">15:00</span></div>
+        <div id="map-container">
+            <!-- Harita buraya otomatik eklenecek -->
+        </div>
+        <div class="input-section">
+            <input type="text" id="countryInput" placeholder="Ülke adını İngilizce giriniz..." disabled>
+        </div>
+        <div class="countries-list">
+            <h3>Bulunan Ülkeler</h3>
+            <div id="foundCountries" class="found-countries"></div>
+        </div>
+        <button id="startButton" class="start-button">Oyunu Başlat</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

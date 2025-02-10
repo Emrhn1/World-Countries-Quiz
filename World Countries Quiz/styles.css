@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
+    /* Alternatif olarak dünya haritası desenli bir arka plan */
+    background-image: url('https://www.transparenttextures.com/patterns/cartographer.png');
+    background-blend-mode: overlay;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#map-container {
+    border: 2px solid #333;
+    margin-bottom: 20px;
+    background-color: #87CEEB; /* Okyanus rengi için açık mavi */
+}
+
+#map-container svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.country {
+    fill: #FFD700; /* Ülkeler için sarı renk */
+    stroke: #666; /* Ülke sınırları için gri renk */
+    stroke-width: 0.5;
+    transition: fill 0.3s ease;
+    cursor: pointer; /* İmleci el işaretine çevir */
+}
+
+.country.highlighted {
+    fill: #4CAF50; /* Seçilen ülke için yeşil renk */
+}
+
+.input-section {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.timer {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.start-button {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    background-color: #45a049;
+}
+
+/* Input'un disabled durumu için stil */
+input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* SVG için smooth transitions */
+svg g {
+    transition: transform 0.15s ease;
+}
+
+.countries-list {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.found-countries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    justify-content: center;
+}
+
+.country-item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+} 
